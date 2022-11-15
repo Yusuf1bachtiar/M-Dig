@@ -45,12 +45,14 @@
   <!-- ======= Header ======= -->
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-
+      <div id="logo">
       <a href="index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
         <h1>Desa Mekarsari</h1>
       </a>
+      </div>
+
 
       <nav id="navbar" class="navbar">
         <ul>
@@ -516,6 +518,18 @@ new Chart("myChart", {
 
   </main><!-- End #main -->
 
+  <script>
+    window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("logo").style.display = "none";
+    document.getElementById("navbar").style;
+  } else {
+    document.getElementById("logo").style.display = "block";
+  }
+}
+    </script>
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
 
