@@ -409,6 +409,7 @@ section {
   .navbar .dropdown>.dropdown-active,
   .navbar .dropdown .dropdown>.dropdown-active {
     display: block;
+    
   }
 
   .mobile-nav-toggle {
@@ -446,6 +447,7 @@ section {
 
   .mobile-nav-active .navbar>ul {
     display: block;
+    background-color: black;
   }
 }
 
