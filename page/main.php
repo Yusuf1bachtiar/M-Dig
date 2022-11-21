@@ -74,8 +74,8 @@
                     <div class="card-body">
                         <div class="small text-muted"><?= $data['date_created'] ?></div>
                         <h2 class="card-title"><?= $data['subject'] ?></h2>
-                        <p class="card-text"><?= substr($data['body'], 7); ?></p>
-                        <a class="btn btn-primary" href="#!">Read more →</a>
+                        <p class="card-text"><?= substr($data['body'], -1000); ?></p>
+                        <a class="btn btn-primary" href="?page=view-post&id=<?php echo base64_encode($data['id']);?>">Read more →</a>
                     </div>
                 </div>
               <?php } ?>
@@ -93,8 +93,8 @@
                             <div class="card-body">
                                 <div class="small text-muted"><?= $data['date_created']; ?></div>
                                 <h2 class="card-title h4"><?= $data['subject']; ?></h2>
-                                <p class="card-text"><?= $data['body']; ?></p>
-                                <a class="btn btn-primary" href="#!">Read more →</a>
+                                <p class="card-text"><?= substr($data['body'], -500); ?></p>
+                                <a class="btn btn-primary" href="?page=view-post&id=<?php echo base64_encode($data['id']);?>">Read more →</a>
                             </div>
                         </div>
                         <!-- More Blog post-->

@@ -1,6 +1,6 @@
 <?php 
 include 'assets/php/db.php';
-require 'function.php'
+require 'assets/php/function.php'
  ?>
 
 <!DOCTYPE html>
