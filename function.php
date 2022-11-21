@@ -5,8 +5,9 @@ function query($query){
 	$sql = $koneksi->query($query);
 	$fetch = [];
 	while ($fetchs = $sql->fetch_assoc()) {
-		$fetch = $fetchs;
+		$fetch[] = $fetchs;
 	}
 	return $fetch;
 }
+
  ?>
