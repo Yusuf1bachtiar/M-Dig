@@ -1,3 +1,8 @@
+<?php 
+include 'assets/php/db.php';
+require 'function.php'
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -69,7 +74,6 @@
 
   <main id="main">
     <?php
-    error_reporting(0);
     if ($_GET['page'] =="") {
       include 'page/main.php';
     }
