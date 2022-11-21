@@ -60,96 +60,21 @@
 
 <body>
 
+  <?php 
+    include "page/header.php";
+   ?>
+
   <!-- ======= Header ======= -->
-  <div class="d-flex justify-content-center bg-dark">
-    <div id="sosmed" class="align-items-center">
-      <a href="#" class="mx-2 text-white"><span class="bi-facebook"></span></a>
-      <a href="#" class="mx-2 text-white"><span class="bi-twitter"></span></a>
-      <a href="#" class="mx-2 text-white"><span class="bi-instagram"></span></a>
-
-
-    </div>
-  </div>
-
-  <div class="header d-flex py-3">
-    <div id="header" class="container">
-      <table>
-        <tr>
-          <td><img src="assets/img/Logo_Mekarsari.png" alt="Logo" height="60"></td>
-          <td><strong>Desa Mekarsari</strong><br>Kabupaten Bogor</td>
-        </tr>
-      </table>
-    </div>
-  </div>
-  <header id="navbar_top" class="header d-flex align-items-center bg-dark">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-center">
-      <div id="logo" class="container" style="display: none;">
-        <table>
-          <tr>
-            <td><img src="assets/img/Logo_Mekarsari.png" alt="Logo" height="60"></td>
-            <td class="text-white"><strong>Desa Mekarsari</strong><br>Kabupaten Bogor</td>
-          </tr>
-        </table>
-      </div>
-
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a id="beranda" href="index.html" class="text-decoration-none text-white">Beranda</a></li>
-          <li class="dropdown"><a href="#" class="text-decoration-none text-white"><span>Pemerintahan Desa</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-              <li><a href="#" class="text-decoration-none">Visi dan Misi</a></li>
-              <li><a href="#" class="text-decoration-none">Pemerintahan Desa</a></li>
-              <li><a href="#" class="text-decoration-none">Badan Permusyawaratan Desa</a></li>
-            </ul>
-          </li>
-          <li class="dropdown"><a href="#" class="text-decoration-none text-white"><span>Profil Desa</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-              <li><a href="#" class="text-decoration-none">Sejarah Desa</a></li>
-              <li><a href="#" class="text-decoration-none">Profil Wilayah Desa</a></li>
-              <li><a href="#" class="text-decoration-none">Arti Lambang Desa</a></li>
-            </ul>
-          </li>
-
-          <li><a href="#" class="text-decoration-none text-white">Galeri</a></li>
-          <li><a href="#" class="text-decoration-none text-white">Surat Online</a></li>
-
-          <li class="dropdown"><a href="#" class="text-decoration-none text-white"><span>Login</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-              <li><a href="#" class="text-decoration-none">Admin</a></li>
-              <li><a href="#" class="text-decoration-none">Layanan</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav><!-- .navbar -->
-      <div class="d-flex justify-content-center bg-dark">
-        <div class="align-items-center">
-    
-          <a href="#" class="mx-2 js-search-open text-white"><span class="bi-search"></span></a>
-          <i class="bi bi-list mobile-nav-toggle"></i>
-    
-          <!-- ======= Search Form ======= -->
-          <div class="search-form-wrap js-search-form-wrap">
-            <form action="search-result.html" class="search-form">
-              <span class="icon bi-search"></span>
-              <input type="text" placeholder="Search" class="form-control">
-              <button class="btn js-search-close"><span class="bi-x"></span></button>
-            </form>
-          </div><!-- End Search Form -->
-    
-        </div>
-      </div>
-      
-
-    </div>
-
-  </header><!-- End Header -->
+  <!-- End Header -->
 
   <main id="main">
     <?php
     error_reporting(0);
     if ($_GET['page'] =="") {
       include 'page/main.php';
+    }
+    elseif ($_GET['page'] =="view-post") {
+      include "page/view-post.php";
     }
     ?>
   </main><!-- End #main -->
@@ -158,7 +83,39 @@
   <?php 
   include "page/footer.php";
    ?>  
+   <script> // detect mobile
+    function myFunction(x) {
+      if (x.matches) { // If media query matches
+        document.getElementById("sosmed").style.display = "none";
+        document.getElementById("header").style.display = "none";
+        document.getElementById('navbar_top').classList.add('fixed-top');
+        document.getElementById('logo').style.display = "block";
+      }
+    }
+    
+        var x = window.matchMedia("(max-width: 1279px)")
+        myFunction(x) // Call listener function at run time
+        x.addListener(myFunction) // Attach listener function on state changes
+      </script>
 
+      <script> // scroll function
+      if(!x.matches) {
+        window.onscroll = function() {scrollFunction()};
+      }
+    function scrollFunction() {
+      // if (!x.matches) {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+          // document.getElementById("logo").style.display = "none";
+          document.getElementById("logo").style.display = "block";
+        } else {
+          document.getElementById("logo").style.display = "none";
+          // document.getElementById("logo").style.display = "none";
+        }
+      
+
+      var x = window.matchMedia("(max-width: 1279px)")
+    }
+    </script>
 
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -176,7 +133,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Core theme JS-->
   <script src="js/scripts.js"></script>
-
+  
 </body>
 
 </html>
