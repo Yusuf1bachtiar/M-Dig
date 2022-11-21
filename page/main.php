@@ -66,26 +66,28 @@
             <div class="col-lg-8">
                 <!-- Featured blog post-->
                 <?php
-                $posterkini = query("SELECT * FROM post ORDER BY date_created DESC LIMIT 1")
+                $posterkini = query("SELECT * FROM post ORDER BY date_created DESC LIMIT 1");
+                foreach ($posterkini as $data){
                  ?>
                 <div class="card mb-4">
                     <a href="#!"><img class="card-img-top" src="https://dummyimage.com/850x350/dee2e6/6c757d.jpg" alt="..." /></a>
                     <div class="card-body">
-                        <div class="small text-muted"><?= $posterkini['date_created'] ?></div>
-                        <h2 class="card-title"><?= $posterkini['subject'] ?></h2>
-                        <p class="card-text"><?= substr($posterkini['body'], 7); ?></p>
+                        <div class="small text-muted"><?= $data['date_created'] ?></div>
+                        <h2 class="card-title"><?= $data['subject'] ?></h2>
+                        <p class="card-text"><?= substr($data['body'], 7); ?></p>
                         <a class="btn btn-primary" href="#!">Read more →</a>
                     </div>
                 </div>
+              <?php } ?>
                 <!-- Nested row for non-featured blog posts-->
                 <div class="row">
-                    <div class="col-lg-6">
-                        <!-- Blog post-->
-                        <?php 
-                        $post = query("SELECT * FROM post ORDER BY date_created DESC");
+                     <?php 
+                        $post = query("SELECT * FROM post ORDER BY date_created DESC LIMIT 1,2");
 
                         foreach ($post as $data) {
-                         ?>
+                         ?><div class="col-lg-6">
+                        <!-- Blog post-->
+                       
                         <div class="card mb-4">
                             <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
                             <div class="card-body">
@@ -95,9 +97,9 @@
                                 <a class="btn btn-primary" href="#!">Read more →</a>
                             </div>
                         </div>
-                      <?php } ?>
                         <!-- More Blog post-->
                     </div>
+                      <?php } ?>
                 </div>
                 <!-- Pagination-->
                 <nav aria-label="Pagination">
