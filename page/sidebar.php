@@ -132,16 +132,17 @@
           
                           <!-- Popular -->
                           <div class="tab-pane show active" id="pills-popular" role="tabpanel" aria-labelledby="pills-popular-tab">
-                            <div class="post-entry-1 border-bottom">
-                              <?php
-                              $sql = "SELECT id_post, COUNT(id) FROM post_view GROUP BY id_post DESC";
-                              $a = mysqli_query($koneksi, $sql);
-                              var_dump($a);
+                            <?php
+                              $sql = query("SELECT post_view.id_post, post.subject, post.date_created, COUNT(post_view.id) FROM post_view INNER JOIN post ON post.id=post_view.id_post GROUP BY id_post DESC");
+                              foreach ($sql as $data){
                               ?>
-                              <div class="post-meta"><span class="date">Sport</span> <span class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
-                              <h2 class="mb-2"><a href="#">How to Avoid Distraction and Stay Focused During Video Calls?</a></h2>
-                              <span class="author mb-3 d-block">Jenny Wilson</span>
+                            <div class="post-entry-1 border-bottom">
+                              
+                              <div class="post-meta"><span class="mx-1">&bullet;</span> <span><?= $data['date_created'] ?></span></div>
+                              <h2 class="mb-2"><a href="#"><?= $data['subject'] ?></a></h2>
+                              <span class="author mb-3 d-block">ADMIN</span>
                             </div>
+                          <?php } ?>
           
                           </div> <!-- End Popular -->
           
