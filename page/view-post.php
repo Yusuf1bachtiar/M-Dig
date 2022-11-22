@@ -22,7 +22,7 @@
               
               <figure class="my-4">
                 <img src="assets/img/post-landscape-5.jpg" alt="" class="img-fluid">
-                <!-- <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, odit? </figcaption> -->
+                <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, odit? </figcaption>
               </figure>
               
             </div><!-- End Single Post Content -->

@@ -1,6 +1,7 @@
 <?php 
 include 'assets/php/db.php';
-require 'assets/php/function.php'
+require 'assets/php/function.php';
+error_reporting(0);
  ?>
 
 <!DOCTYPE html>
