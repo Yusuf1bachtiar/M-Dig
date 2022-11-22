@@ -32,7 +32,7 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a id="beranda" href="index.html" class="text-decoration-none text-white">Beranda</a></li>
+          <li><a id="beranda" href="../m-dig/" class="text-decoration-none text-white">Beranda</a></li>
           <li class="dropdown"><a href="#" class="text-decoration-none text-white"><span>Pemerintahan Desa</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
               <li><a href="#" class="text-decoration-none">Visi dan Misi</a></li>
