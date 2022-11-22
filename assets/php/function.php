@@ -15,4 +15,8 @@ function insert($query){
 	$sql = "$query";
 	mysqli_query($koneksi, $sql);
 }
+
+function counter($count){
+	
+}
  ?>
