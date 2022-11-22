@@ -75,8 +75,8 @@
                         <div class="small text-muted"><?= $data['date_created'] ?></div>
                         <h2 class="card-title"><?= $data['subject'] ?></h2>
                         <p class="card-text"><?php if ($detect->isMobile() && !$detect->isTablet()) {
-                                  echo substr($data['body'], -200);
-                                }else{echo substr($data['body'], -750);} ?></p>
+                                  echo substr(strip_tags($data['body']), 0, 200);
+                                }else{echo substr(strip_tags($data['body']), 0, 750);} ?></p>
                         <a class="btn btn-primary" href="?page=view-post&id=<?php echo base64_encode($data['id']);?>">Read more →</a>
                     </div>
                 </div>
@@ -96,8 +96,8 @@
                                 <div class="small text-muted"><?= $data['date_created']; ?></div>
                                 <h2 class="card-title h4"><?= $data['subject']; ?></h2>
                                 <p class="card-text"><?php if ($detect->isMobile() && !$detect->isTablet()) {
-                                  echo substr($data['body'], -200);
-                                }else{echo substr($data['body'], -250);} ?></p>
+                                  echo substr(strip_tags($data['body']), 0, 200);
+                                }else{echo substr(strip_tags($data['body']), 0, 250);} ?></p>
                                 <a class="btn btn-primary" href="?page=view-post&id=<?php echo base64_encode($data['id']);?>">Read more →</a>
                             </div>
                         </div>

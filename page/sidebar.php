@@ -59,7 +59,7 @@
                     </div>
                 </div>
                 <!-- Side widget-->
-                <section id="hero-slider" class="hero-slider">
+                <section id="hero-slider" class="hero-slider card mb-4">
                   <div class="container-md" data-aos="fade-in">
                     <div class="row-12" style="height: 300px;">
                       <div class="col-md-12">
