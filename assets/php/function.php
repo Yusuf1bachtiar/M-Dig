@@ -10,4 +10,9 @@ function query($query){
 	return $fetch;
 }
 
+function insert($query){
+	global $koneksi;
+	$sql = "$query";
+	mysqli_query($koneksi, $sql);
+}
  ?>

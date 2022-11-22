@@ -1,5 +1,5 @@
 <?php 
-error_reporting(0);
+// error_reporting(0);
 include 'assets/php/db.php';
 require 'assets/php/function.php';
 require_once "assets/vendor/mobile-detect/Mobile_Detect.php";

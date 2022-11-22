@@ -1,3 +1,10 @@
+<?php
+require 'assets/php/db.php';
+$id = base64_decode($_GET['id']);
+$sql = "INSERT INTO post_view (id_post) VALUES('$id')";
+mysqli_query($koneksi, $sql);
+?>
+
 <section class="single-post-content">
       <div class="container">
         <div class="row">
