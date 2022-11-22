@@ -1,7 +1,9 @@
 <?php 
+error_reporting(0);
 include 'assets/php/db.php';
 require 'assets/php/function.php';
-error_reporting(0);
+require_once "assets/vendor/mobile-detect/Mobile_Detect.php";
+$detect = new Mobile_Detect;
  ?>
 
 <!DOCTYPE html>
