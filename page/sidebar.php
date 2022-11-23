@@ -41,18 +41,14 @@
                     <div class="card-header">Menu Kategori</div>
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-sm-6">
+                            <div class="col-sm-12">
                                 <ul class="list-unstyled mb-0">
-                                    <li><a href="#" class="text-black">Berita Desa</a></li>
-                                    <li><a href="#" class="text-black">Agenda Desa</a></li>
-                                    <li><a href="#" class="text-black">Peraturan Desa</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-sm-6">
-                                <ul class="list-unstyled mb-0">
-                                    <li><a href="#" class="text-black">Perpustakaan Desa</a></li>
-                                    <li><a href="#" class="text-black">Transparansi Keuangan</a></li>
-                                    <li><a href="#" class="text-black">Tutorials</a></li>
+                                  <?php 
+                                  $categories = query("SELECT DISTINCT(category_name) FROM post_category");
+                                  foreach ($categories as $category) {
+                                  ?>
+                                    <li><a href="?category=<?= $category['category_name'] ?>" class="text-black"><?= $category['category_name']; ?></a></li>
+                                  <?php } ?>
                                 </ul>
                             </div>
                         </div>
@@ -121,9 +117,6 @@
                             <button class="nav-link active" id="pills-popular-tab" data-bs-toggle="pill" data-bs-target="#pills-popular" type="button" role="tab" aria-controls="pills-popular" aria-selected="true">Popular</button>
                           </li>
                           <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-trending-tab" data-bs-toggle="pill" data-bs-target="#pills-trending" type="button" role="tab" aria-controls="pills-trending" aria-selected="false">Trending</button>
-                          </li>
-                          <li class="nav-item" role="presentation">
                             <button class="nav-link" id="pills-latest-tab" data-bs-toggle="pill" data-bs-target="#pills-latest" type="button" role="tab" aria-controls="pills-latest" aria-selected="false">Latest</button>
                           </li>
                         </ul>
@@ -133,28 +126,30 @@
                           <!-- Popular -->
                           <div class="tab-pane show active" id="pills-popular" role="tabpanel" aria-labelledby="pills-popular-tab">
                             <?php
-                              $sql = query("SELECT post_view.id_post, post.subject, post.date_created, COUNT(post_view.id) FROM post_view INNER JOIN post ON post.id=post_view.id_post GROUP BY id_post DESC");
+                              $sql = query("SELECT post_view.id_post, post.subject, post.date_created, COUNT(post_view.id) FROM post_view INNER JOIN post ON post.id=post_view.id_post GROUP BY id_post DESC LIMIT 4");
                               foreach ($sql as $data){
                               ?>
                             <div class="post-entry-1 border-bottom">
                               
-                              <div class="post-meta"><span class="mx-1">&bullet;</span> <span><?= $data['date_created'] ?></span></div>
-                              <h2 class="mb-2"><a href="#"><?= $data['subject'] ?></a></h2>
-                              <span class="author mb-3 d-block">ADMIN</span>
+                              <div class="post-meta"><span><?= $data['date_created'] ?></span></div>
+                              <h2 class="mb-2"><a href="<?= "?page=view-post&id=".base64_encode($data['id_post']); ?>"><?= $data['subject'] ?></a></h2>
                             </div>
                           <?php } ?>
           
                           </div> <!-- End Popular -->
           
                           <!-- Trending -->
-                          <div class="tab-pane fade" id="pills-trending" role="tabpanel" aria-labelledby="pills-trending-tab">
+                          <div class="tab-pane fade" id="pills-latest" role="tabpanel" aria-labelledby="pills-latest-tab">
+                            <?php 
+                            $sql2 = query("SELECT post.id, post.date_created, post.category, post.subject, post_category.category_name FROM `post` Inner JOIN post_category ON post_category.id=post.category order by id DESC LIMIT 4");
+
+                            foreach ($sql2 as $data2){
+                            ?>
                             <div class="post-entry-1 border-bottom">
-                              <div class="post-meta"><span class="date">Lifestyle</span> <span class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
-                              <h2 class="mb-2"><a href="#">17 Pictures of Medium Length Hair in Layers That Will Inspire Your New Haircut</a></h2>
-                              <span class="author mb-3 d-block">Jenny Wilson</span>
+                              <div class="post-meta"><span class="date"><?= $data2['category_name'] ?></span> <span class="mx-1">&bullet;</span> <span><?= $data2['date_created'] ?></span></div>
+                              <h2 class="mb-2"><a href="?page=view-page&id=<?php base64_encode($id)  ?>"><?= $data2['subject'] ?></a></h2>
                             </div>
-          
-                            
+                            <?php } ?>
           
                           </div> <!-- End Latest -->
           

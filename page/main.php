@@ -66,7 +66,10 @@
             <div class="col-lg-8">
                 <!-- Featured blog post-->
                 <?php
-                $posterkini = query("SELECT * FROM post ORDER BY date_created DESC LIMIT 1");
+                $cate = $_GET['category'];
+                $hal = (isset($_GET['hal'])) ? $_GET['hal'] : 1;
+                if ($hal == 1 && $cate == "" || !isset($cate) && $hal == 1) {
+                $posterkini = query("SELECT * FROM post ORDER BY id DESC LIMIT 0,1");
                 foreach ($posterkini as $data){
                  ?>
                 <div class="card mb-4">
@@ -80,12 +83,26 @@
                         <a class="btn btn-primary" href="?page=view-post&id=<?php echo base64_encode($data['id']);?>">Read more →</a>
                     </div>
                 </div>
-              <?php } ?>
+              <?php }} ?>
                 <!-- Nested row for non-featured blog posts-->
                 <div class="row">
-                     <?php 
-                        $post = query("SELECT * FROM post ORDER BY date_created DESC LIMIT 1,2");
+                     <?php
+                        if (isset($cate)) {
+                          $scate = query("SELECT * FROM post_category WHERE category_name='$cate'");
+                        
+                        $showdata = 4;
+                        $jumlahdata = count(query("SELECT * FROM post WHERE category='".$scate[0]['id']."'"));
+                        $jumlahhalaman = ceil($jumlahdata / $showdata); 
+                        $awaldata = (($showdata * $hal) - $showdata);
+                        $post = query("SELECT * FROM post WHERE category='".$scate[0]['id']."'ORDER BY id DESC LIMIT ".$awaldata.", ".$showdata."");
+                        }else{
 
+                        $showdata = 4;
+                        $jumlahdata = count(query("SELECT * FROM post")) - 1;
+                        $jumlahhalaman = ceil($jumlahdata / $showdata); 
+                        $awaldata = (($showdata * $hal) - $showdata)+1;
+                        $post = query("SELECT * FROM post ORDER BY id DESC LIMIT ".$awaldata.", ".$showdata."");
+                        }
                         foreach ($post as $data) {
                          ?><div class="col-lg-6">
                         <!-- Blog post-->
@@ -103,20 +120,41 @@
                         </div>
                         <!-- More Blog post-->
                     </div>
-                      <?php } ?>
+                      <?php } 
+                      $prevpage = $hal - 1;
+                      $nextpage = $hal + 1;
+                      ?>
                 </div>
                 <!-- Pagination-->
                 <nav aria-label="Pagination">
                     <hr class="my-0" />
-                    <ul class="pagination justify-content-center my-4">
-                        <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Newer</a></li>
-                        <li class="page-item active" aria-current="page"><a class="page-link text-white bg-black" href="#!">1</a></li>
-                        <li class="page-item"><a class="page-link text-black" href="#!">2</a></li>
-                        <li class="page-item"><a class="page-link text-black" href="#!">3</a></li>
-                        <li class="page-item disabled"><a class="page-link" href="#!">...</a></li>
-                        <li class="page-item"><a class="page-link text-black" href="#!">15</a></li>
-                        <li class="page-item"><a class="page-link text-black" href="#!">Older</a></li>
+                    <?php 
+
+                    if (isset($cate)) { ?>
+                      <ul class="pagination justify-content-center my-4">
+                        <li class="page-item <?php if($hal == 1){echo 'disabled';} ?>"><a class="page-link <?php if($hal != 1){echo 'text-black';} ?>" href="<?php if($hal != 1){echo '?cate='.$cate.'&hal='.$prevpage;} ?>" <?php if($hal == 1){echo 'tabindex="-1" aria-disabled="true"';} ?>>Terbaru</a></li>
+
+                        <?php for ($i=1; $i<=$jumlahhalaman; $i++) { ?>
+                        <li class="page-item <?php if($hal == $i){echo 'active aria-current="page"'; } ?>" aria-current="page">
+                          <a href="<?php if($hal == $i) { echo "#"; }else{ echo '?cate='.$cate.'&hal='.$i; } ?>" class="<?php if($hal == $i){echo 'page-link text-white bg-black';}else{ echo 'page-link text-black'; } ?>"><?= $i ?></a>
+                        </li>
+                      <?php } ?>
+                        <li class="page-item <?php if($hal == $jumlahhalaman){echo 'disabled';} ?>"><a class="page-link <?php if($hal != $jumlahhalaman){echo 'text-black';} ?>" href="<?php if($hal != $jumlahhalaman){echo '?cate='.$cate.'&hal='.$nextpage;} ?>" <?php if($hal == $jumlahhalaman){echo 'tabindex="-1" aria-disabled="true"';} ?>>Terlama</a></li>
                     </ul>
+                    <?php }else{
+                     ?>
+                    
+                    <ul class="pagination justify-content-center my-4">
+                        <li class="page-item <?php if($hal == 1){echo 'disabled';} ?>"><a class="page-link <?php if($hal != 1){echo 'text-black';} ?>" href="<?php if($hal != 1){echo '?hal='.$prevpage;} ?>" <?php if($hal == 1){echo 'tabindex="-1" aria-disabled="true"';} ?>>Terbaru</a></li>
+
+                        <?php for ($i=1; $i<=$jumlahhalaman; $i++) { ?>
+                        <li class="page-item <?php if($hal == $i){echo 'active aria-current="page"'; } ?>" aria-current="page">
+                          <a href="<?php if($hal == $i) { echo "#"; }else{ echo '?hal='.$i; } ?>" class="<?php if($hal == $i){echo 'page-link text-white bg-black';}else{ echo 'page-link text-black'; } ?>"><?= $i ?></a>
+                        </li>
+                      <?php } ?>
+                        <li class="page-item <?php if($hal == $jumlahhalaman){echo 'disabled';} ?>"><a class="page-link <?php if($hal != $jumlahhalaman){echo 'text-black';} ?>" href="<?php if($hal != $jumlahhalaman){echo '?hal='.$nextpage;} ?>" <?php if($hal == $jumlahhalaman){echo 'tabindex="-1" aria-disabled="true"';} ?>>Terlama</a></li>
+                    </ul>
+                  <?php } ?>
                 </nav>
             </div>
             <!-- Side widgets-->
