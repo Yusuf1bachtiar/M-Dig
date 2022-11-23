@@ -59,7 +59,7 @@
           </li>
         </ul>
       </nav><!-- .navbar -->
-      <div class="d-flex justify-content-center bg-dark">
+      <div class="position-relative bg-dark">
         <div class="align-items-center">
     
           <a href="#" class="mx-2 js-search-open text-white"><span class="bi-search"></span></a>
@@ -72,7 +72,8 @@
               <input type="text" placeholder="Search" class="form-control">
               <button class="btn js-search-close"><span class="bi-x"></span></button>
             </form>
-          </div><!-- End Search Form -->
+          </div>
+          <!-- End Search Form -->
     
         </div>
       </div>
