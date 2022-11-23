@@ -92,14 +92,14 @@
                         
                         $showdata = 4;
                         $jumlahdata = count(query("SELECT * FROM post WHERE category='".$scate[0]['id']."'"));
-                        $jumlahhalaman = ceil($jumlahdata / $showdata); 
+                        $jumlahhalaman = ceil($jumlahdata / $showdata);
                         $awaldata = (($showdata * $hal) - $showdata);
                         $post = query("SELECT * FROM post WHERE category='".$scate[0]['id']."'ORDER BY id DESC LIMIT ".$awaldata.", ".$showdata."");
                         }else{
 
                         $showdata = 4;
                         $jumlahdata = count(query("SELECT * FROM post")) - 1;
-                        $jumlahhalaman = ceil($jumlahdata / $showdata); 
+                        $jumlahhalaman = ceil($jumlahdata / $showdata);
                         $awaldata = (($showdata * $hal) - $showdata)+1;
                         $post = query("SELECT * FROM post ORDER BY id DESC LIMIT ".$awaldata.", ".$showdata."");
                         }
