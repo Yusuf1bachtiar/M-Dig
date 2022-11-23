@@ -33,9 +33,9 @@
             </td>
             <td>
                 <div class="col-lg-4"style="width:110px;">
-                  <a href="#" class="text-decoration-none">
+                  <a href="http://localhost/M-Dig/page/view-post-agama.php" class="text-decoration-none">
                       <img src="https://dummyimage.com/45x45/bfb4bf/fff.png&text=45x45" class="rounded-circle" width="35" height="35" alt="..." style="float: left;">
-                      <h3 class="footer-heading"><br> Data Agama</h3>
+                      <h3 class="footer-heading"><br> Data Agama</h3> 
                   </a>
                 </div>
             </td>
