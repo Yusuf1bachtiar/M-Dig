@@ -108,16 +108,16 @@
                 </section>
 
                 <div class="card mb-4">
-                  <div class="card-header">Arsip Artikel
+                  <div class="card-header">
                     <div class="card-body">
                       <div class="aside-block">
 
                         <ul class="nav nav-pills custom-tab-nav mb-4" id="pills-tab" role="tablist">
                           <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="pills-popular-tab" data-bs-toggle="pill" data-bs-target="#pills-popular" type="button" role="tab" aria-controls="pills-popular" aria-selected="true">Popular</button>
+                            <button class="nav-link active" id="pills-popular-tab" data-bs-toggle="pill" data-bs-target="#pills-popular" type="button" role="tab" aria-controls="pills-popular" aria-selected="true">Populer</button>
                           </li>
                           <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-latest-tab" data-bs-toggle="pill" data-bs-target="#pills-latest" type="button" role="tab" aria-controls="pills-latest" aria-selected="false">Latest</button>
+                            <button class="nav-link" id="pills-latest-tab" data-bs-toggle="pill" data-bs-target="#pills-latest" type="button" role="tab" aria-controls="pills-latest" aria-selected="false">Terbaru</button>
                           </li>
                         </ul>
           
@@ -161,7 +161,38 @@
                 
                 <div class="card mb-4">
                   <div class="card-header">Agenda</div>
-                  <div class="card-body"></div>
+                  <div class="card-body">
+                    <div class="row row-stripped">
+                      <div class="col-md-2">
+                        <h4><span class="badge badge-secondary">23</span></h4>
+                        <h6 class="">OCT</h6>
+                      </div>
+                      <div class="col-md-10">
+                        <h4 class="text-uppercase"><strong>Ice Cream Social</strong></h4>
+                          <ul class="list-inline">
+                              <li class="list-inline-item"><i class="fa fa-calendar-o" aria-hidden="true"></i> Monday</li>
+                            <li class="list-inline-item"><i class="fa fa-clock-o" aria-hidden="true"></i> 12:30 PM - 2:00 PM</li>
+                            <li class="list-inline-item"><i class="fa fa-location-arrow" aria-hidden="true"></i> Cafe</li>
+                          </ul>
+                          <p>Lorem ipsum dolsit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                      </div>
+                    </div>
+                    <div class="row row-stripped">
+                      <div class="col-md-2">
+                        <h4><span class="badge badge-secondary">23</span></h4>
+                        <h6 class="">OCT</h6>
+                      </div>
+                      <div class="col-md-10">
+                        <h4 class="text-uppercase"><strong>Ice Cream Social</strong></h4>
+                          <ul class="list-inline">
+                              <li class="list-inline-item"><i class="fa fa-calendar-o" aria-hidden="true"></i> Monday</li>
+                            <li class="list-inline-item"><i class="fa fa-clock-o" aria-hidden="true"></i> 12:30 PM - 2:00 PM</li>
+                            <li class="list-inline-item"><i class="fa fa-location-arrow" aria-hidden="true"></i> Cafe</li>
+                          </ul>
+                          <p>Lorem ipsum dolsit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                      </div>
+                    </div>
+                  </div>
               </div>
                 <div class="card mb-4">
                   <div class="card-header">Peta Wilayah Desa</div>
