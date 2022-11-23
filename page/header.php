@@ -35,21 +35,21 @@
           <li><a id="beranda" href="../m-dig/" class="text-decoration-none text-white">Beranda</a></li>
           <li class="dropdown"><a href="#" class="text-decoration-none text-white"><span>Pemerintahan Desa</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
-              <li><a href="#" class="text-decoration-none">Visi dan Misi</a></li>
-              <li><a href="#" class="text-decoration-none">Pemerintahan Desa</a></li>
-              <li><a href="#" class="text-decoration-none">Badan Permusyawaratan Desa</a></li>
+              <li><a href="?page=view-post&id=MQ==" class="text-decoration-none">Visi dan Misi</a></li>
+              <li><a href="?page=view-post&id=Mg==" class="text-decoration-none">Pemerintahan Desa</a></li>
+              <li><a href="?page=view-post&id=Mw==" class="text-decoration-none">Badan Permusyawaratan Desa</a></li>
             </ul>
           </li>
           <li class="dropdown"><a href="#" class="text-decoration-none text-white"><span>Profil Desa</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
-              <li><a href="#" class="text-decoration-none">Sejarah Desa</a></li>
-              <li><a href="#" class="text-decoration-none">Profil Wilayah Desa</a></li>
-              <li><a href="#" class="text-decoration-none">Arti Lambang Desa</a></li>
+              <li><a href="?page=view-post&id=NA==" class="text-decoration-none">Sejarah Desa</a></li>
+              <li><a href="?page=view-post&id=NQ==" class="text-decoration-none">Profil Wilayah Desa</a></li>
+              <li><a href="?page=view-post&id=Ng==" class="text-decoration-none">Arti Lambang Desa</a></li>
             </ul>
           </li>
 
-          <li><a href="#" class="text-decoration-none text-white">Galeri</a></li>
-          <li><a href="#" class="text-decoration-none text-white">Surat Online</a></li>
+          <li><a href="?page=gallery" class="text-decoration-none text-white">Galeri</a></li>
+          <li><a href="?page=surat-online" class="text-decoration-none text-white">Surat Online</a></li>
 
           <li class="dropdown"><a href="#" class="text-decoration-none text-white"><span>Login</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
