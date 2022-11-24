@@ -24,6 +24,7 @@ if (isset($_COOKIE['login'])) {
     <link href="../assets/css/style.css" rel="stylesheet">
 </head>
  <body>
+
     <section class="form-02-main">
       <div class="container">
         <div class="row">
@@ -33,6 +34,7 @@ if (isset($_COOKIE['login'])) {
                 <div class="logo">
                   <img src="../assets/images/user.png">
                 </div>
+                <form method="post">
                 <div class="form-group">
                   <input type="username" name="username" class="form-control _ge_de_ol" type="text" placeholder="Enter username" required="" aria-required="true">
                 </div>
@@ -43,8 +45,9 @@ if (isset($_COOKIE['login'])) {
 
                 <div class="checkbox form-group">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="">
-                    <label class="form-check-label" for="">
+
+                    <input class="form-check-input" type="checkbox" value="remember" id="">
+                    <label class="form-check-label" for="remember"
                       Remember me
                     </label>
                   </div>
@@ -53,11 +56,11 @@ if (isset($_COOKIE['login'])) {
 
                 <div class="form-group">
                   <div class="_btn_04">
-                    <button type="submit" name="submit" style="background-color: transparent;border:none;color: white;">Login</button>
-                  </div>
-                  Tidak Punya akun ? <a href="#" style="color: blue;" >Register</a>
-                </div>
 
+                    <button type="submit" name="submit" style="background-color: transparent;border:none;text-decoration: none;">Login</button>
+                  </div>
+                </div>
+                </form>
                 <div class="form-group nm_lk"><p>Or Login With</p></div>
 
                 <div class="form-group pt-0">
@@ -77,7 +80,7 @@ if (isset($_COOKIE['login'])) {
         </div>
       </div>
     </section>
-  </body>
+   </body>
 </html>
 
 <?php if (isset($_POST['submit'])): 
