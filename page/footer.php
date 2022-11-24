@@ -1,7 +1,7 @@
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
 
-    <div class="footer-content">
+    <!-- <div class="footer-content">
       <div class="container">
 
         <div class="row g-5"><h1><center> STATISTIK DESA </center></h1>
@@ -59,7 +59,7 @@
         </table>
       </div>
     </div>
-  </div>
+  </div> -->
 
     <div class="footer-legal">
       <div class="container">
