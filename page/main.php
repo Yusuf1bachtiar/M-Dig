@@ -102,7 +102,7 @@
                         $post = query("SELECT * FROM post WHERE category='".$scate[0]['id']."' ORDER BY id DESC LIMIT ".$awaldata.", ".$showdata."");
                         }elseif (isset($search) && !isset($cate)) {
                         $showdata = 4;
-                        $jumlahdata = count(query("SELECT * FROM `post` WHERE `subject` LIKE '%search%' OR `body` LIKE '%search%'"));
+                        $jumlahdata = count(query("SELECT * FROM `post` WHERE `subject` LIKE '%$search%' OR `body` LIKE '%$search%'"));
                         $jumlahhalaman = ceil($jumlahdata / $showdata);
                         if ($jumlahhalaman == 0) {
                           $jumlahhalaman =1;
