@@ -19,190 +19,107 @@ if (isset($_COOKIE['login'])) {
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Login</title>
-</head>
-<style type="text/css">
-	@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif
-}
-
-.container {
-    margin: 50px auto;
-}
-
-.body {
-    position: relative;
-    width: 720px;
-    height: 440px;
-    margin: 20px auto;
-    border: 1px solid #dddd;
-    border-radius: 18px;
-    overflow: hidden;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-.box-1 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.box-2 {
-    padding: 10px;
-}
-
-.box-1,
-.box-2 {
-    width: 50%;
-}
-
-.h-1 {
-    font-size: 24px;
-    font-weight: 700;
-}
-
-.text-muted {
-    font-size: 14px;
-}
-
-.container .box {
-    width: 100px;
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid transparent;
-    text-decoration: none;
-    color: #615f5fdd;
-}
-
-.box:active,
-.box:visited {
-    border: 2px solid #ee82ee;
-}
-
-.box:hover {
-    border: 2px solid #ee82ee;
-}
-
-.btn.btn-primary {
-    background-color: transparent;
-    color: #ee82ee;
-    border: 0px;
-    padding: 0;
-    font-size: 14px;
-}
-
-.btn.btn-primary .fas.fa-chevron-right {
-    font-size: 12px;
-}
-
-.footer .p-color {
-    color: #ee82ee;
-}
-
-.footer.text-muted {
-    font-size: 10px;
-}
-
-.fas.fa-times {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    height: 20px;
-    width: 20px;
-    background-color: #f3cff379;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.fas.fa-times:hover {
-    color: #ff0000;
-}
-
-@media (max-width:767px) {
+	<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bootstrap Clean Modal Login Modal Form</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
     body {
-        padding: 10px;
+		font-family: 'Varela Round', sans-serif;
+	}
+	.modal-login {
+		width: 350px;
+	}
+	.modal-login .modal-content {
+		padding: 20px;
+		border-radius: 1px;
+		border: none;
+	}
+	.modal-login .modal-header {
+		border-bottom: none;
+        position: relative;
+		justify-content: center;
+	}
+	.modal-login h4 {
+		text-align: center;
+		font-size: 26px;
+	}
+    .modal-login .form-group {
+        margin-bottom: 20px;
     }
-
-    .body {
-        width: 100%;
-        height: 100%;
+	.modal-login .form-control, .modal-login .btn {
+		min-height: 40px;
+		border-radius: 30px; 
+        font-size: 15px;
+        transition: all 0.5s;
+	}
+    .modal-login .form-control {
+        font-size: 13px;
     }
-
-    .box-1 {
-        width: 100%;
+    .modal-login .form-control:focus {
+        border-color: #a177ff;
     }
-
-    .box-2 {
-        width: 100%;
-        height: 440px;
-    }
-}
+	.modal-login .hint-text {
+		text-align: center;
+		padding-top: 10px;
+	}
+	.modal-login .close {
+        position: absolute;
+		top: -5px;
+		right: -5px;
+	}
+	.modal-login .btn {
+		background: #a177ff;
+		border: none;
+		line-height: normal;
+	}
+	.modal-login .btn:hover, .modal-login .btn:focus {
+		background: #8753ff;
+	}
+	.modal-login .hint-text a {
+		color: #999;
+	}
+	.trigger-btn {
+		display: inline-block;
+		margin: 100px auto;
+	}
 </style>
-<body>
-<form method="post">
-	<label for="username">Username</label>
-	<input type="username" name="username">
-	<label for="password">Password</label>	
-	<input type="password" name="password">
-	<input type="checkbox" name="remember" value="remember">
-	<label for="remember">Remember Me</label>
-	<button type="submit" name="submit">Login</button>
-</form>
-<div class="container">
-        <div class="body d-md-flex align-items-center justify-content-between">
-            <div class="box-1 mt-md-0 mt-5">
-                <img src="https://images.pexels.com/photos/2033997/pexels-photo-2033997.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-                    class="" alt="">
-            </div>
-            <div class=" box-2 d-flex flex-column h-100">
-                <div class="mt-5">
-                    <p class="mb-1 h-1">Create Account.</p>
-                    <p class="text-muted mb-2">Share your thouhts with the world form today.</p>
-                    <div class="d-flex flex-column ">
-                        <p class="text-muted mb-2">Continue with...</p>
-                        <div class="d-flex align-items-center">
-                            <a href="#" class="box me-2 selectio">
-                                <span class="fab fa-facebook-f mb-2"></span>
-                                <p class="mb-0">Facebook</p>
-                            </a>
-                            <a href="#" class="box me-2">
-                                <span class="fab fa-google mb-2"></span>
-                                <p class="mb-0">Google</p>
-                            </a>
-                            <a href="#" class="box">
-                                <span class="far fa-envelope mb-2"></span>
-                                <p class="mb-0">Email</p>
-                            </a>
-                        </div>
-                        <div class="mt-3">
-                            <p class="mb-0 text-muted">Already have an account?</p>
-                            <div class="btn btn-primary">Log in<span class="fas fa-chevron-right ms-1"></span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-auto">
-                    <p class="footer text-muted mb-0 mt-md-0 mt-4">By register you agree with our
-                        <span class="p-color me-1">terms and conditions</span>and
-                        <span class="p-color ms-1">privacy policy</span>
-                    </p>
-                </div>
-            </div>
-            <span class="fas fa-times"></span>
-        </div>
-    </div>
+</head>
+<body style="background-image: url(../assets/img/post-slide-3.jpg);" >
+<div class="text-center">
+	<!-- Button HTML (to Trigger Modal) -->
+	<a href="#myModal" class="trigger-btn" data-toggle="modal">Click to Open Login Modal</a>
+</div>
 
-
-
-
+<!-- Modal HTML -->
+<div id="myModal" class="modal fade">
+	<div class="modal-dialog modal-login">
+		<div class="modal-content" style="border-radius: 15px;" >
+			<div class="modal-header">				
+				<h4 class="modal-title">Sign in</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			</div>
+			<div class="modal-body">
+				<form action="/examples/actions/confirmation.php" method="post">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Username" required="required">
+					</div>
+					<div class="form-group">
+						<input type="password" class="form-control" placeholder="Password" required="required">
+					</div>
+					<div class="form-group">
+						<input type="submit" class="btn btn-primary btn-block btn-lg" value="Sign in">
+					</div>
+				</form>				
+				<p class="hint-text small"><a href="#">Forgot Your Password?</a></p>
+			</div>
+		</div>
+	</div>
+</div>     
 </body>
 </html>
 
