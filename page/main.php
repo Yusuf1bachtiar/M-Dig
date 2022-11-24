@@ -67,9 +67,8 @@
                 <!-- Featured blog post-->
                 <?php
                 $cate = $_GET['category'];
-                $search = $_GET['search'];
                 $hal = (isset($_GET['hal'])) ? $_GET['hal'] : 1;
-                if ($hal == 1 && $cate == "" && $search == ""|| !isset($cate) && $search == "" && $hal == 1 || !isset($search) && $cate == "" && $hal == 1) {
+                if ($hal == 1 && $cate == "" || !isset($cate) && $hal == 1) {
                 $posterkini = query("SELECT * FROM post ORDER BY id DESC LIMIT 0,1");
                 foreach ($posterkini as $data){
                  ?>
@@ -94,24 +93,11 @@
                         $showdata = 4;
                         $jumlahdata = count(query("SELECT * FROM post WHERE category='".$scate[0]['id']."'"));
                         $jumlahhalaman = ceil($jumlahdata / $showdata);
+                        if ($jumlahhalaman == 0) {
+                          $jumlahhalaman=1;
+                        }
                         $awaldata = (($showdata * $hal) - $showdata);
                         $post = query("SELECT * FROM post WHERE category='".$scate[0]['id']."'ORDER BY id DESC LIMIT ".$awaldata.", ".$showdata."");
-                        }else{
-
-                        $showdata = 4;
-                        $jumlahdata = count(query("SELECT * FROM post")) - 1;
-                        $jumlahhalaman = ceil($jumlahdata / $showdata);
-                        $awaldata = (($showdata * $hal) - $showdata)+1;
-                        $post = query("SELECT * FROM post ORDER BY id DESC LIMIT ".$awaldata.", ".$showdata."");
-                        }
-                        if (isset($search)) {
-                          $scate = query("SELECT * FROM `post` WHERE `subject` LIKE '%$search%' AND `body` LIKE '$search'");
-                        
-                        $showdata = 4;
-                        $jumlahdata = count(query("SELECT * FROM `post` WHERE `subject` LIKE '%search%' AND `body` LIKE '%search%'"));
-                        $jumlahhalaman = ceil($jumlahdata / $showdata);
-                        $awaldata = (($showdata * $hal) - $showdata);
-                        $post = query("SELECT * FROM `post` WHERE `subject` LIKE '%$search%' OR `body` LIKE '%$search%' ORDER BY id DESC LIMIT ".$awaldata.", ".$showdata."");
                         }else{
 
                         $showdata = 4;
@@ -149,14 +135,14 @@
 
                     if (isset($cate)) { ?>
                       <ul class="pagination justify-content-center my-4">
-                        <li class="page-item <?php if($hal == 1){echo 'disabled';} ?>"><a class="page-link <?php if($hal != 1){echo 'text-black';} ?>" href="<?php if($hal != 1){echo '?cate='.$cate.'&hal='.$prevpage;} ?>" <?php if($hal == 1){echo 'tabindex="-1" aria-disabled="true"';} ?>>Terbaru</a></li>
+                        <li class="page-item <?php if($hal == 1){echo 'disabled';} ?>"><a class="page-link <?php if($hal != 1){echo 'text-black';} ?>" href="<?php if($hal != 1){echo '?category='.$cate.'&hal='.$prevpage;} ?>" <?php if($hal == 1){echo 'tabindex="-1" aria-disabled="true"';} ?>>Terbaru</a></li>
 
                         <?php for ($i=1; $i<=$jumlahhalaman; $i++) { ?>
                         <li class="page-item <?php if($hal == $i){echo 'active aria-current="page"'; } ?>" aria-current="page">
-                          <a href="<?php if($hal == $i) { echo "#"; }else{ echo '?cate='.$cate.'&hal='.$i; } ?>" class="<?php if($hal == $i){echo 'page-link text-white bg-black';}else{ echo 'page-link text-black'; } ?>"><?= $i ?></a>
+                          <a href="<?php if($hal == $i) { echo "#"; }else{ echo '?category='.$cate.'&hal='.$i; } ?>" class="<?php if($hal == $i){echo 'page-link text-white bg-black';}else{ echo 'page-link text-black'; } ?>"><?= $i ?></a>
                         </li>
                       <?php } ?>
-                        <li class="page-item <?php if($hal == $jumlahhalaman){echo 'disabled';} ?>"><a class="page-link <?php if($hal != $jumlahhalaman){echo 'text-black';} ?>" href="<?php if($hal != $jumlahhalaman){echo '?cate='.$cate.'&hal='.$nextpage;} ?>" <?php if($hal == $jumlahhalaman){echo 'tabindex="-1" aria-disabled="true"';} ?>>Terlama</a></li>
+                        <li class="page-item <?php if($hal == $jumlahhalaman){echo 'disabled';} ?>"><a class="page-link <?php if($hal != $jumlahhalaman){echo 'text-black';} ?>" href="<?php if($hal != $jumlahhalaman){echo '?category='.$cate.'&hal='.$nextpage;} ?>" <?php if($hal == $jumlahhalaman){echo 'tabindex="-1" aria-disabled="true"';} ?>>Terlama</a></li>
                     </ul>
                     <?php }else{
                      ?>
