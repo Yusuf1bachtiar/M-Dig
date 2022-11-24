@@ -164,8 +164,8 @@
                   <div class="card-body">
                     <div class="row row-stripped">
                       <div class="col-md-2">
-                        <h4><span class="badge badge-secondary">23</span></h4>
-                        <h6 class="">OCT</h6>
+                        <h4><span class="badge badge-secondary" style="background-color: #6c757d;">23</span></h4>
+                        <h7 class="">OCT</h7>
                       </div>
                       <div class="col-md-10">
                         <h4 class="text-uppercase"><strong>Ice Cream Social</strong></h4>
@@ -179,8 +179,8 @@
                     </div>
                     <div class="row row-stripped">
                       <div class="col-md-2">
-                        <h4><span class="badge badge-secondary">23</span></h4>
-                        <h6 class="">OCT</h6>
+                        <h4><span class="badge badge-secondary" style="background-color: #6c757d;">23</span></h4>
+                        <h7 class="">OCT</h7>
                       </div>
                       <div class="col-md-10">
                         <h4 class="text-uppercase"><strong>Ice Cream Social</strong></h4>
@@ -194,4 +194,3 @@
                     </div>
                   </div>
               </div>
-              

@@ -44,70 +44,80 @@
               </div>
               <div class="custom-swiper-button-next">
                 <span class="bi-chevron-right"></span>
-              </div>
+            </div>
               <div class="custom-swiper-button-prev">
                 <span class="bi-chevron-left"></span>
               </div>
 
               <div class="swiper-pagination"></div>
-            </div>
-            <div class="container">
-
-        <div class="row g-5"><h1><center> STATISTIK DESA </center></h1>
-          <table>
-            <tr>
-              <td>
-                <div class="col-lg-4" style="width:110px;">
-                  <a href="#" class="text-decoration-none">
-                    <img src="https://dummyimage.com/45x45/bfb4bf/fff.png&text=45x45" class="rounded-circle" width="35" height="35" alt="..." style="float: left;">
-                    <h3 class="footer-heading"> Data Wilayah</h3>
-                  </a>
-                </div>
-              </td>
-              <td>
-                <div class="col-lg-4"style="width:110px;">
-                  <a href="#" class="text-decoration-none">
-                    <img src="https://dummyimage.com/45x45/bfb4bf/fff.png&text=45x45" class="rounded-circle" width="35" height="35" alt="..." style="float: left;">
-                  <h3 class="footer-heading"><br> Data Pendidikan</h3>
-                  </a>
-              </div>
-              </td>
-              <td>
-                <div class="col-lg-4"style="width:110px;">
-                  <a href="#" class="text-decoration-none">
-                    <img src="https://dummyimage.com/45x45/bfb4bf/fff.png&text=45x45" class="rounded-circle" width="35" height="35" alt="..." style="float: left;">
-                  <h3 class="footer-heading"><br> Data Pekerjaan</h3>
-                  </a>
-                </div>
-            </td>
-            <td>
-                <div class="col-lg-4"style="width:110px;">
-                  <a href="http://localhost/M-Dig/page/view-post-agama.php" class="text-decoration-none">
-                      <img src="https://dummyimage.com/45x45/bfb4bf/fff.png&text=45x45" class="rounded-circle" width="35" height="35" alt="..." style="float: left;">
-                      <h3 class="footer-heading"><br> Data Agama</h3> 
-                  </a>
-                </div>
-            </td>
-            <td>
-              <div class="col-lg-4"style="width:110px;">
-                <a href="#" class="text-decoration-none">
-                  <img src="https://dummyimage.com/45x45/bfb4bf/fff.png&text=45x45" class="rounded-circle" width="35" height="35" alt="..." style="float: left;">
-                  <h3 class="footer-heading"><br> Data Jenis Kelamin</h3>
-                </a>
-              </div>
-            </td>
-            <td>
-               <div class="col-lg-4"style="width:110px;">
-                <a href="#" class="text-decoration-none">
-                  <img src="https://dummyimage.com/45x45/bfb4bf/fff.png&text=45x45" class="rounded-circle" width="35" height="35" alt="..." style="float: left;">
-                <h3 class="footer-heading"><br> Statistik Umur</h3>
-                </a>       
           </div>
-            </td>
-          </tr>
-        </table>
-      </div>
+            
+        
+        <div class="container" style="padding-top: 50px;">
+          <div class="row justify-content-center">
+            <div class="col-lg-12 align-center">
+              <div class="row justify-content-center">
+          
+                <div class="col-lg-3 col-md-6">
+                  <div class="counter-box text-center">
+                    <a href="#" class="text-decoration-none">
+                      <table align="center">
+                        <tr>
+                        <td><img src="https://dummyimage.com/45x45/bfb4bf/fff.png&text=45x45" class="rounded-circle text-center" height="70" alt="..."></td>
+                        </tr>
+                        <tr>
+                        <td><h6 class="counter-head text-muted"> Layanan Masyarakat</h6></td>
+                        </tr>
+                      </table>
+                    </a>
+                  </div>
+                </div>
+           
+                <div class="col-lg-3 col-md-6">
+                  <div class="counter-box text-center">
+                    <a href="#" class="text-decoration-none">
+                      <table align="center">
+                        <tr>
+                        <td><img src="https://dummyimage.com/45x45/bfb4bf/fff.png&text=45x45" class="rounded-circle" height="70" alt="..."></td>
+                        </tr>
+                        <tr>
+                        <td><h6 class="counter-head text-muted"> Statistik Desa</h6></td>
+                        </tr>
+                      </table>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <div class="counter-box text-center">
+                    <a href="#" class="text-decoration-none">
+                      <table align="center">
+                        <tr>
+                        <td><img src="https://dummyimage.com/45x45/bfb4bf/fff.png&text=45x45" class="rounded-circle" height="70" alt="..."></td>
+                        </tr>
+                        <tr>
+                        <td><h6 class="counter-head text-muted"> APB Desa</h6></td>
+                        </tr>
+                      </table>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <div class="counter-box text-center">
+                    <a href="#" class="text-decoration-none">
+                      <table align="center">
+                        <tr>
+                        <td><img src="https://dummyimage.com/45x45/bfb4bf/fff.png&text=45x45" class="rounded-circle" height="70" alt="..."></td>
+                        </tr>
+                        <tr>
+                        <td><h6 class="counter-head text-muted"> Kegiatan Desa</h6></td>
+                        </tr>
+                      </table>
+                    </a>
+                  </div>
+                </div>
           </div>
+        </div>
+        </div>
         </div>
       </div>
     </section><!-- End Hero Slider Section -->
