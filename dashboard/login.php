@@ -58,7 +58,7 @@ if (isset($_COOKIE['login'])) {
                   </div>
                 </div>
                 </form>
-                <div class="form-group nm_lk"><p>Or Login With</p></div>
+                <div class="form-group nm_lk"><p>You don't have account ? <a href="#">REGISTER</a></p><p>Or Login With</p></div>
 
                 <div class="form-group pt-0">
                   <div class="_social_04">
