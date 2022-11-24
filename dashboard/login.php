@@ -1,6 +1,6 @@
 <?php 
-include '../../assets/login/php/db.php';
-include '../../assets/login/php/function.php';
+include '../assets/php/db.php';
+include '../assets/php/function.php';
 session_start();
 if (isset($_COOKIE['login'])) {
 	$_SESSION['id'] = $_COOKIE['id'];
@@ -19,11 +19,11 @@ if (isset($_COOKIE['login'])) {
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Login</title>
-	<link href="../assets/login/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../assets/login/css/font-awesome.min.css" rel="stylesheet">
-    <link href="../assets/login/css/style.css" rel="stylesheet">
+	<link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
 </head>
-<body>
+ <body>
     <section class="form-02-main">
       <div class="container">
         <div class="row">
@@ -31,11 +31,10 @@ if (isset($_COOKIE['login'])) {
             <div class="_lk_de">
               <div class="form-03-main">
                 <div class="logo">
-                  <img src="../assets/login/images/user.png">
+                  <img src="../assets/images/user.png">
                 </div>
-                <form method="post">
                 <div class="form-group">
-                  <input type="username" name="username" class="form-control _ge_de_ol" type="text" placeholder="Enter username" required="" aria-required="true">
+                  <input type="email" name="email" class="form-control _ge_de_ol" type="text" placeholder="Enter Email" required="" aria-required="true">
                 </div>
 
                 <div class="form-group">
@@ -44,8 +43,8 @@ if (isset($_COOKIE['login'])) {
 
                 <div class="checkbox form-group">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="remember" id="">
-                    <label class="form-check-label" for="remember">
+                    <input class="form-check-input" type="checkbox" value="" id="">
+                    <label class="form-check-label" for="">
                       Remember me
                     </label>
                   </div>
@@ -54,11 +53,11 @@ if (isset($_COOKIE['login'])) {
 
                 <div class="form-group">
                   <div class="_btn_04">
-                    <button type="submit" name="submit" style="background-color: transparent;border:none;text-decoration: none;">Login</button>
+                    <a href="#">Login</a>
                   </div>
                 </div>
-                </form>
-                <div class="form-group nm_lk"><p>You don't have account ? <a href="#">REGISTER</a></p><p>Or Login With</p></div>
+
+                <div class="form-group nm_lk"><p>Or Login With</p></div>
 
                 <div class="form-group pt-0">
                   <div class="_social_04">
@@ -77,7 +76,7 @@ if (isset($_COOKIE['login'])) {
         </div>
       </div>
     </section>
-   </body>
+  </body>
 </html>
 
 <?php if (isset($_POST['submit'])): 
