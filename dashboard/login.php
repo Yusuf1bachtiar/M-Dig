@@ -34,54 +34,6 @@ if (isset($_COOKIE['login'])) {
                 <div class="logo">
                   <img src="../assets/images/user.png">
                 </div>
-                <form method="post">
-                <div class="form-group">
-                  <input type="username" name="username" class="form-control _ge_de_ol" type="text" placeholder="Enter username" required="" aria-required="true">
-                </div>
-
-                <div class="form-group">
-                  <input type="password" name="password" class="form-control _ge_de_ol" type="text" placeholder="Enter Password" required="" aria-required="true">
-                </div>
-
-                <div class="checkbox form-group">
-                  <div class="form-check">
-
-                    <input class="form-check-input" type="checkbox" value="remember" id="">
-                    <label class="form-check-label" for="remember"
-                      Remember me
-                    </label>
-                  </div>
-                  <a href="#">Forgot Password</a>
-                </div>
-
-                <div class="form-group">
-                  <div class="_btn_04">
-
-                    <button type="submit" name="submit" style="background-color: transparent;border:none;text-decoration: none;">Login</button>
-                  </div>
-                </div>
-                </form>
-                <div class="form-group nm_lk"><p>Or Login With</p></div>
-
-                <div class="form-group pt-0">
-                  <div class="_social_04">
-                    <ol>
-                      <li><i class="fa fa-facebook"></i></li>
-                      <li><i class="fa fa-twitter"></i></li>
-                      <li><i class="fa fa-google-plus"></i></li>
-                      <li><i class="fa fa-instagram"></i></li>
-                      <li><i class="fa fa-linkedin"></i></li>
-                    </ol>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-   </body>
-</html>
 
 <?php if (isset($_POST['submit'])): 
 
@@ -109,8 +61,52 @@ if (password_verify($login[0]['password'], $password)) {
 	</script>
 	<?php
 }else{
-	echo 'salah';
+	?>
+<div class="alert alert-danger" role="alert">
+  Username atau password salah, silahkan coba lagi
+</div>
+	<?php
 }}else{
-echo 'login gagal';
+	?>
+<div class="alert alert-danger" role="alert">
+  Username atau password salah, silahkan coba lagi
+</div>
+	<?php
 }
  endif ?>
+                <form method="post">
+                <div class="form-group">
+                  <input type="username" name="username" class="form-control _ge_de_ol" type="text" placeholder="Enter username" required="" aria-required="true">
+                </div>
+
+                <div class="form-group">
+                  <input type="password" name="password" class="form-control _ge_de_ol" type="text" placeholder="Enter Password" required="" aria-required="true">
+                </div>
+
+                <div class="checkbox form-group">
+                  <div class="form-check">
+
+                    <input class="form-check-input" type="checkbox" value="remember" name="remember">
+                    <label class="form-check-label" for="remember">
+                      Tetap Login
+                    </label>
+                  </div>
+                  
+                </div>
+
+                <div class="form-group">
+
+                    <button class="btn _btn_04" type="submit" name="submit">Login</button>
+                  </div>
+                  <div class="form-group nm_lk"><a href="register.php">Belum punya akun? <strong>Register</strong></a></div>
+                </div>
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+   </body>
+</html>
