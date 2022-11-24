@@ -38,6 +38,9 @@ $detect = new Mobile_Detect;
   <link href="assets/css/main.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
+  <link rel="stylesheet" href="assets/vendor/carousel/">
+
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
 
