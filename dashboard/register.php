@@ -40,25 +40,18 @@ if (isset($_COOKIE['login'])) {
                 <div class="form-group">
                   <input type="password" name="password" class="form-control _ge_de_ol" type="text" placeholder="Enter Password" required="" aria-required="true">
                 </div>
-
-                <div class="checkbox form-group">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="">
-                    <label class="form-check-label" for="">
-                      Remember me
-                    </label>
-                  </div>
-                  <a href="#">Forgot Password</a>
+                <div class="form-group">
+                  <p><font size="2" style="padding-left: 2px;color: red;">**Konfirmasi Ulang Password</font></p>
+                  <input type="password" name="password" class="form-control _ge_de_ol" type="text" placeholder="Enter Password" required="" aria-required="true">
                 </div>
 
                 <div class="form-group">
                   <div class="_btn_04">
-                    <button type="submit" name="submit" style="background-color: transparent;border:none;color: white;">Login</button>
+                    <button type="submit" name="submit" style="background-color: transparent;border:none;color: white;">Register</button>
                   </div>
-                  Tidak Punya akun ? <a href="#" style="color: blue;" >Register</a>
                 </div>
 
-                <div class="form-group nm_lk"><p>Or Login With</p></div>
+                <div class="form-group nm_lk"><p>Or Register With</p></div>
 
                 <div class="form-group pt-0">
                   <div class="_social_04">
