@@ -75,7 +75,7 @@ tr:nth-child(even) {
 }
 </style>
 <body>
-<h2 style="margin-left: 15px;">DATA DEMOGRAFI BERDASARKAN AGAMA</h2>
+<h2 style="margin-left: 15px;">DATA DEMOGRAFI BERDASARKAN JENIS KELAMIN</h2>
 <hr style="border: 15px solid gray;border-radius: 15%">
 <div class="chart-a">
 <figure class="highcharts-figure">
@@ -89,7 +89,7 @@ tr:nth-child(even) {
 </figure>
 </div>
 <div class="tabel-a">
-<h2>TABEL AGAMA</h2>
+<h2>TABEL JENIS KELAMIN</h2>
 <table>
 	<tr>
 		<th>Kode</th>
@@ -99,40 +99,17 @@ tr:nth-child(even) {
 	</tr>
 	<tr>
 		<td>1</td>
-		<td>Islam</td>
+		<td>Laki-Laki</td>
 		<td>510</td>
 		<td>91%</td>
 	</tr>
 	<tr>
 		<td>2</td>
-		<td>Islam</td>
+		<td>Perempuan</td>
 		<td>510</td>
 		<td>91%</td>
 	</tr>
-	<tr>
-		<td>3</td>
-		<td>Islam</td>
-		<td>510</td>
-		<td>91%</td>
-	</tr>
-	<tr>
-		<td>4</td>
-		<td>Islam</td>
-		<td>510</td>
-		<td>91%</td>
-	</tr>
-	<tr>
-		<td>5</td>
-		<td>Islam</td>
-		<td>510</td>
-		<td>91%</td>
-	</tr>
-	<tr>
-		<td>6</td>
-		<td>Islam</td>
-		<td>510</td>
-		<td>91%</td>
-	</tr>
+	
 
 </table>
 </div>
@@ -157,7 +134,7 @@ Highcharts.chart('container', {
     zMin: 0,
     name: 'countries',
     data: [{
-      name: 'Islam',
+      name: 'Laki-Laki',
       y: 505992,
       z: 92
     }, {
