@@ -62,9 +62,10 @@
     
           <!-- ======= Search Form ======= -->
           <div class="search-form-wrap js-search-form-wrap">
-            <form action="search-result.html" class="search-form">
+            <form method="POST" class="search-form">
               <span class="icon bi-search"></span>
-              <input type="text" placeholder="Search" class="form-control">
+              <input type="text" placeholder="Search" class="form-control" name="search">
+              <button type="submit" name="searchbtn" style="visibility: hidden;"></button>
               <button class="btn js-search-close"><span class="bi-x"></span></button>
             </form>
           </div>
@@ -77,3 +78,14 @@
     </div>
 
   </header>
+
+  <?php 
+
+  if (isset($_POST['searchbtn'])) {
+    ?>
+    <script type="text/javascript">
+      window.location.href="?search=<?= $_POST['search']; ?>"
+    </script>
+    <?php
+  }
+   ?> 
