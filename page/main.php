@@ -135,14 +135,14 @@
 
                     if (isset($cate)) { ?>
                       <ul class="pagination justify-content-center my-4">
-                        <li class="page-item <?php if($hal == 1){echo 'disabled';} ?>"><a class="page-link <?php if($hal != 1){echo 'text-black';} ?>" href="<?php if($hal != 1){echo '?cate='.$cate.'&hal='.$prevpage;} ?>" <?php if($hal == 1){echo 'tabindex="-1" aria-disabled="true"';} ?>>Terbaru</a></li>
+                        <li class="page-item <?php if($hal == 1){echo 'disabled';} ?>"><a class="page-link <?php if($hal != 1){echo 'text-black';} ?>" href="<?php if($hal != 1){echo '?category='.$cate.'&hal='.$prevpage;} ?>" <?php if($hal == 1){echo 'tabindex="-1" aria-disabled="true"';} ?>>Terbaru</a></li>
 
                         <?php for ($i=1; $i<=$jumlahhalaman; $i++) { ?>
                         <li class="page-item <?php if($hal == $i){echo 'active aria-current="page"'; } ?>" aria-current="page">
-                          <a href="<?php if($hal == $i) { echo "#"; }else{ echo '?cate='.$cate.'&hal='.$i; } ?>" class="<?php if($hal == $i){echo 'page-link text-white bg-black';}else{ echo 'page-link text-black'; } ?>"><?= $i ?></a>
+                          <a href="<?php if($hal == $i) { echo "#"; }else{ echo '?category='.$cate.'&hal='.$i; } ?>" class="<?php if($hal == $i){echo 'page-link text-white bg-black';}else{ echo 'page-link text-black'; } ?>"><?= $i ?></a>
                         </li>
                       <?php } ?>
-                        <li class="page-item <?php if($hal == $jumlahhalaman){echo 'disabled';} ?>"><a class="page-link <?php if($hal != $jumlahhalaman){echo 'text-black';} ?>" href="<?php if($hal != $jumlahhalaman){echo '?cate='.$cate.'&hal='.$nextpage;} ?>" <?php if($hal == $jumlahhalaman){echo 'tabindex="-1" aria-disabled="true"';} ?>>Terlama</a></li>
+                        <li class="page-item <?php if($hal == $jumlahhalaman){echo 'disabled';} ?>"><a class="page-link <?php if($hal != $jumlahhalaman){echo 'text-black';} ?>" href="<?php if($hal != $jumlahhalaman){echo '?category='.$cate.'&hal='.$nextpage;} ?>" <?php if($hal == $jumlahhalaman){echo 'tabindex="-1" aria-disabled="true"';} ?>>Terlama</a></li>
                     </ul>
                     <?php }else{
                      ?>
