@@ -1,6 +1,11 @@
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
 
+<div class="map-section">
+            <div class="contact-info-warp">
+                <div class="contact-info">
+                    <h4>Alamat</h4>
+                    <p>Jl. Raya Cileungsi-Jonggol Kp. Cigarogol Ds. Mekarsari</p>
     <!-- <div class="footer-content">
       <div class="container">
 
@@ -14,30 +19,23 @@
                     <h3 class="footer-heading"> Data Wilayah</h3>
                   </a>
                 </div>
-              </td>
-              <td>
-                <div class="col-lg-4"style="width:110px;">
-                  <a href="#" class="text-decoration-none">
-                    <img src="https://dummyimage.com/45x45/bfb4bf/fff.png&text=45x45" class="rounded-circle" width="35" height="35" alt="..." style="float: left;">
-                  <h3 class="footer-heading"><br> Data Pendidikan</h3>
-                  </a>
-              </div>
-              </td>
-              <td>
-                <div class="col-lg-4"style="width:110px;">
-                  <a href="#" class="text-decoration-none">
-                    <img src="https://dummyimage.com/45x45/bfb4bf/fff.png&text=45x45" class="rounded-circle" width="35" height="35" alt="..." style="float: left;">
-                  <h3 class="footer-heading"><br> Data Pekerjaan</h3>
-                  </a>
+                <div class="contact-info">
+                    <h4>Phone</h4>
+                    <p>021 - 82492917</p>
                 </div>
-            </td>
-            <td>
-                <div class="col-lg-4"style="width:110px;">
-                  <a href="http://localhost/M-Dig/page/view-post-agama.php" class="text-decoration-none">
-                      <img src="https://dummyimage.com/45x45/bfb4bf/fff.png&text=45x45" class="rounded-circle" width="35" height="35" alt="..." style="float: left;">
-                      <h3 class="footer-heading"><br> Data Agama</h3> 
-                  </a>
+                <div class="contact-info">
+                    <h4>Email</h4>
+                    <p>smk_alfarabi2022@smk-alfarabi.sch.id</p>
                 </div>
+                <div class="contact-info">
+                    <h4>Jam Kerja</h4>
+                    <p>Senin - Jumat, 08:00AM - 05:00 PM</p>
+                </div>
+            </div>
+            <div class="map" id="map-canvas" style="position: relative; overflow: hidden;">
+                <iframe style="border: 0; width: 100%; height: 500px;" src="https://www.google.com/maps/embed/v1/place?q=Smk al farabi&amp;key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8" frameborder="0" allowfullscreen=""></iframe>
+            </div>
+
             </td>
             <td>
               <div class="col-lg-4"style="width:110px;">
@@ -59,7 +57,7 @@
         </table>
       </div>
     </div>
-  </div> -->
+  </div> 
 
     <div class="footer-legal">
       <div class="container">

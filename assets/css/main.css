@@ -19,6 +19,40 @@ body {
   color: rgba(var(--color-primary-rgb), 1);
 }
 
+.map-section {
+    height: 500px;
+    position: relative;
+}
+
+.map-section .map {
+    height: 100%;
+}
+
+.contact-info-warp {
+    position: absolute;
+    width: 400px;
+    height: 100%;
+    background: rgba(var(--color-black-rgb), 0.9);
+    text-align: center;
+    z-index: 1;
+    padding-top: 70px;
+}
+
+.contact-info-warp .contact-info {
+    margin-bottom: 40px;
+}
+
+.contact-info-warp .contact-info h4 {
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.contact-info-warp .contact-info p {
+    color: #fff;
+    margin-bottom: 0;
+}
+
 a {
   color: var(--color-links);
   text-decoration: none;

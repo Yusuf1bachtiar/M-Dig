@@ -124,6 +124,8 @@ body {
     font: 14px 'Open Sans', Geneva, "Times New Roman", times;
 }
 
+
+
 .clear:after {
     content: ".";
     display: block;
