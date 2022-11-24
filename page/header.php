@@ -50,13 +50,8 @@
 
           <li><a href="?page=gallery" class="text-decoration-none text-white">Galeri</a></li>
           <li><a href="?page=surat-online" class="text-decoration-none text-white">Surat Online</a></li>
-
-          <li class="dropdown"><a href="#" class="text-decoration-none text-white"><span>Login</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-              <li><a href="#" class="text-decoration-none">Admin</a></li>
-              <li><a href="#" class="text-decoration-none">Layanan</a></li>
-            </ul>
-          </li>
+          <li><a href="dashboard" class="text-decoration-none text-white">Login</a></li>
+          
         </ul>
       </nav><!-- .navbar -->
       <div class="position-relative bg-dark">
