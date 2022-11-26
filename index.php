@@ -37,7 +37,6 @@ $detect = new Mobile_Detect;
   <link href="assets/css/variables.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-
   <link rel="stylesheet" href="assets/vendor/carousel/">
 
 

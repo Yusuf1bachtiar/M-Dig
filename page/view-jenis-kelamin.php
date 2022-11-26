@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <title></title>
+</head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/variable-pie.js"></script>
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 <script src="https://code.highcharts.com/modules/export-data.js"></script>
 <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
 <style>
+  .header{
+    padding-top: 2%;
+  }
 #container {
   height: 500px;
 }
@@ -14,7 +25,7 @@
 .highcharts-data-table table {
   min-width: 320px;
   max-width: 700px;
-  margin: 1em auto;
+  margin: 1em auto;local
 }
 
 .highcharts-data-table table {
@@ -75,8 +86,28 @@ tr:nth-child(even) {
 }
 </style>
 <body>
-<h2 style="margin-left: 15px;">DATA DEMOGRAFI BERDASARKAN JENIS KELAMIN</h2>
-<hr style="border: 15px solid gray;border-radius: 15%">
+<!-- Example split danger button -->
+<div style="max-width: 100%;">
+<nav class="navbar navbar-light bg-light justify-content-between">
+  <div style="padding-left: 40%;">
+  <select>  
+    <option>Statistik Data Jenis Kelamin Masyarakat Desa</option>
+    <option>Statistik Data Agama Masyarakat Desa</option>
+    <option>Statistik Data Pekerjaan Masyarakat Desa</option>
+    <option>tatistik Data Usia Masyarakat Desa</option>
+    <option>Statistik Data Pendidikan Masyarakat Desa</option>
+  </select>
+  </div>
+  <div style="float: right;">
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav>
+</div>
+</div>
+
+<hr style="border: 1px solid gray;border-radius: 10%;">
 <div class="chart-a">
 <figure class="highcharts-figure">
   <div id="container"></div>
